@@ -19,4 +19,12 @@ export const createUserValidationSchema = {
     isEmail: { message: "Email must be a valid email" },
     notEmpty: { message: "Email must not be empty" },
   },
+  password: {
+    isLength: {
+      options: { min: 6, max: 100 },
+      errorMessage: "Password must be between 6 and 100 characters",
+    },
+    isString: { message: "Password must be a string" },
+    notEmpty: { message: "Password must not be empty" },
+  },
 };
